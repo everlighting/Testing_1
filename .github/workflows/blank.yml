@@ -7,6 +7,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Echo docker detail
-          run: docker run --help
+          run: docker info
         - name: Running Hello WOrld
-          run: docker run hello-worlds
+          run: docker run --help
+          
