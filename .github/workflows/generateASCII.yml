@@ -1,6 +1,6 @@
 name: Generate ASCII Framework
 on: 
-    push: 
+    #push: 
     workflow_dispatch: 
 jobs:
     ascii-job:
@@ -12,8 +12,8 @@ jobs:
               run: sudo apt-get install cowsay -y
             - name: Execute COWSAY CMD
               run: cowsay -f dragon "Iam a COW ... Run for your life" >> dragon.txt
-            # - name: Test File Exists
-            #   run: grep -i dragon "dragon.txt"
+             - name: Test File Exists
+               run: grep -i COW "dragon.txt"
             - name: List Files
               run: ls -ltra
             - name: Read FIles
