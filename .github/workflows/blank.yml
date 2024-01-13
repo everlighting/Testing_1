@@ -1,23 +1,12 @@
-name: Matrix Configuration
-on: 
-  push: 
-  workflow_dispatch: 
+name: workflow
+on: push
 jobs:
-  deploy:
-      strategy:
-        fail-fast: false
-        matrix:
-          os: [ubuntu-latest,ubuntu-20.04, windows-latest]
-          images: [hello-world,alpine]
-          exclude:
-            - images: alpine
-              os: windows-latest
-          include:
-            - images: amd64/alpine
-              os: ubuntu-20.04
-      runs-on: ${{matrix.os}}
-      steps:
-        - name: Echo docker detail
-          run: docker info
-        - name: Running ${{matrix.images}}
-          run: docker run ${{matrix.images}}
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Message
+        run: echo Testing
+      - name: List Files
+        run: ls
+      - name: Read Files
+        run: cat README.md
