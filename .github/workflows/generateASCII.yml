@@ -1,6 +1,6 @@
 name: Generate ASCII Framework
 on: 
-    #push: 
+    push: 
     workflow_dispatch: 
 jobs:
     ascii-job:
@@ -8,15 +8,15 @@ jobs:
         steps:
             - name: Checkout Repo
               uses:  actions/checkout@v4
-            - name: Install COWSAY Program
-              run: sudo apt-get install cowsay -y
-            - name: Execute COWSAY CMD
-              run: cowsay -f ghost "Iam a COW ... Run for your life" >> dragon.txt
-            - name: Test File Exists
-              run: grep -i COW "dragon.txt"
-            - name: List Files
-              run: ls -ltra
-            - name: Read FIles
-              run: cat dragon.txt
+            - name: Executing shell scripts
+              run: ./script.sh
+            # - name: Execute COWSAY CMD
+            #   run: cowsay -f ghost "Iam a COW ... Run for your life" >> dragon.txt
+            # - name: Test File Exists
+            #   run: grep -i COW "dragon.txt"
+            # - name: List Files
+            #   run: ls -ltra
+            # - name: Read FIles
+            #   run: cat dragon.txt
 
                   
