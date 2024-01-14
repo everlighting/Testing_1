@@ -9,7 +9,7 @@ jobs:
             - name: Checkout Repo
               uses:  actions/checkout@v4
             - name: Installing COWSAY package
-              run: sudo apt apt-get install cowsay -y
+              run: sudo apt-get install cowsay -y
             - name: Execute COWSAY CMD
               run: cowsay -f ghost "Iam a COW ... Run for your life" >> dragon.txt
             - name: Test File Exists
