@@ -11,9 +11,9 @@ jobs:
             - name: Installing COWSAY package
               run: sudo apt-get install cowsay -y
             - name: Execute COWSAY CMD
-              run: cowsay -f ghost "Iam a COW ... Run for your life" >> dragon.txt
+              run: cowsay -f dragon "Iam a COW ... Run for your life" >> dragon.txt
             - name: Test File Exists
-              run: grep -i COW "dragon.txt"
+              run: grep -i dragon "dragon.txt"
             - name: List Files
               run: ls -ltra
             - name: Read FIles
