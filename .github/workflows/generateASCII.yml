@@ -5,6 +5,7 @@ on:
 jobs:
     Building_job_1:
         runs-on: ubuntu-latest
+        timeout-minutes: 1 
         steps:
             - name: Checkout Repo
               uses:  actions/checkout@v4
@@ -46,5 +47,11 @@ jobs:
             run: cat dragon.txt
           - name: Deployin
             run: echo "Deploying"....
+    testing_job_1:
+      timeout-minutes: 1
+      runs-on: ubuntu-latest
+      steps:
+        - name: sleep 120s
+          run: sleep  120s
 
                   
